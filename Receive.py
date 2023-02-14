@@ -13,7 +13,6 @@ while True:
     passed_url = str(message)
     url = passed_url[2:]
     url = url[:-1]
-    socket.send_string(f"Received request: {url}")
 
     icons = favicon.get(url)
     icon = icons[0]
@@ -22,7 +21,7 @@ while True:
 
     print(image_info)
 
-    time.sleep(5)
+    time.sleep(10)
 
     socket.send(image_info)
 
